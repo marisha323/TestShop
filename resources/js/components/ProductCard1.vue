@@ -1,7 +1,7 @@
 <template>
     <div class="product-card">
         <a :href="'/product/' + product.id">
-        <img :src="product.image" :alt="product.name" class="product-image"  />
+        <img :src="getImageUrl(product.image)" :alt="product.name" class="product-image"  />
             </a>
         <h2 class="product-name">{{ product.name }}</h2>
         <p class="product-price">${{ product.price}}</p>
@@ -20,7 +20,7 @@ export default {
     },
     methods: {
         getImageUrl(image) {
-            return `${image}`; // Впевніться, що ваш шлях до зображення правильний
+            return `/${image}`; // Впевніться, що ваш шлях до зображення правильний
         },
         addToCart() {
             this.$emit('add-to-cart', this.product);

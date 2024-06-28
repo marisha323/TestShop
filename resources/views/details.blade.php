@@ -13,6 +13,6 @@
     <product-detail :product='@json($product)'></product-detail>
 
 </div>
-<p>@json($product)</p>
+
 </body>
 </html>

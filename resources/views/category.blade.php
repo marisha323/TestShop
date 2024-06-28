@@ -15,6 +15,6 @@
 <div id="app">
     <category-page :products='@json($products)'></category-page>
 </div>
-    <p>@json($products)</p>
+
 </body>
 </html>
