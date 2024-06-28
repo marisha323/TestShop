@@ -1,7 +1,7 @@
 <template>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <div class="product-detail">
-        <img :src="productImage(product.image)" :alt="product.name" class="product-image"  />
+        <img :src="product.image" :alt="product.name" class="product-image"  />
         <h1 class="product-name">{{ product.name }}</h1>
         <p class="product-description">{{ product.description }}</p>
         <p class="product-price">${{ product.price }}</p>
@@ -23,7 +23,7 @@ export default {
 
     methods: {
         productImage(image) {
-            return `/${image}`; // Впевніться, що ваш шлях до зображення правильний
+            return `${image}`; // Впевніться, що ваш шлях до зображення правильний
         },
         addToCart() {
             console.log("Product added to cart:", this.product);

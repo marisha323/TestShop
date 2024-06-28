@@ -18,7 +18,7 @@
             <h2>Ваші товари</h2>
             <ul class="cart-items">
                 <li v-for="item in cartItems" :key="item.id">
-                    <img :src="getImageUrl(item.product.image)" :alt="item.product.name" class="cart-item-image" />
+                    <img :src="item.product.image" :alt="item.product.name" class="cart-item-image" />
                     <span class="cart-item-name">{{ item.product.name }}</span>
                     <span class="cart-item-price">${{ item.product.price }}</span>
                 </li>
